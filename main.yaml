@@ -1,5 +1,9 @@
-- name: include vs import
-  hosts: local
-  connection: local
+# - name: include vs import
+#   hosts: local
+#   connection: local
+#   roles:
+#   - role-1
+
+- hosts: localhost
   roles:
-  - role-1
+    - plugin_demo

@@ -1,0 +1,20 @@
+---
+# 1. lookup_plugins/random_greeting.py — pick a random greeting word
+- name: pick a random greeting via lookup plugin
+  ansible.builtin.set_fact:
+    greeting_word: "{{ lookup('random_greeting', 'unused') }}"
+
+- name: show chosen greeting
+  ansible.builtin.debug:
+    msg: "Lookup plugin chose: {{ greeting_word }}"
+
+# 2. library/greet.py + module_utils/greet_utils.py — custom module backed by a util
+- name: use custom greet module (calls module_utils internally)
+  greet:
+    name: "World"
+    greeting: "{{ greeting_word }}"
+  register: greet_result
+
+- name: show greeting result from custom module
+  ansible.builtin.debug:
+    msg: "Custom module says: {{ greet_result.message }}"
