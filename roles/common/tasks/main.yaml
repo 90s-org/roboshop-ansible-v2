@@ -7,7 +7,7 @@
 - name: message-3
   debug:
     msg: "Hi from MSG-3"
-- name: call role-2
-  #import_role:
-  include_role:
-    name: role-3
+# - name: call role-2
+#   #import_role:
+#   include_role:
+#     name: role-3

@@ -2,5 +2,6 @@
   #include_role:
   import_role:
     name: common
+  when: os == "RedHat"
   tags: 
   - hi
