@@ -1,0 +1,7 @@
+- name: install nginx
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: hello world
+    debug:
+      msg: "Hello World"
