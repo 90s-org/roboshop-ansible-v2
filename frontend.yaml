@@ -1,8 +1,12 @@
 - name: install nginx
   hosts: frontend
   become: yes
-  serial: 4
+  serial: 3
   tasks:
   - name: hello world
     debug:
       msg: "Hello World"
+  - name: install nginx
+    package:
+      name: nginx
+      state: present
