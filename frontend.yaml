@@ -1,6 +1,7 @@
 - name: install nginx
   hosts: frontend
   become: yes
+  serial: 2
   tasks:
   - name: hello world
     debug:
