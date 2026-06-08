@@ -4,6 +4,9 @@
 - name: message-2
   debug:
     msg: "Hi from MSG-2"
+- name: change the fact
+  set_fact:
+    os: "Debian"
 - name: message-3
   debug:
     msg: "Hi from MSG-3"
