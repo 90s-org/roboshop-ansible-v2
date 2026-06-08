@@ -1,6 +1,6 @@
 - name: include role
-  include_role:
-  #import_role:
+  #include_role:
+  import_role:
     name: common
   when: os == "RedHat"
   loop: 
