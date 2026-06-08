@@ -7,6 +7,10 @@ filters:
 hostnames:
   # This option allows displaying the public ip addresses.
   - private-ip-address
+keyed_groups:
+- separator: ''
+  # name of the group is frontend
+  key: tags.Name
 
 
 #   # This option allows displaying the private ip addresses using `tag:Name` as a prefix.
