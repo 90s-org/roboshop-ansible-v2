@@ -1,6 +1,6 @@
 - name: message-1
   debug:
-    msg: "Hi from MSG-1"
+    msg: "Hi from MSG-1 {{ item }}"
 - name: message-2
   debug:
     msg: "Hi from MSG-2"
